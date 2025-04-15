@@ -7,44 +7,11 @@ terraform {
   }
 }
 
-resource "random_pet" "example_one" {
-  length    = var.pet_length
-  prefix    = var.pet_prefix
-  separator = var.pet_separator
-}
+module "example-module" {
+  source  = "app.terraform.io/abasista-tfc/example-module/random"
+  version = "1.0.0"
 
-resource "random_pet" "example_two" {
-  length    = var.pet_length
-  prefix    = var.pet_prefix
-  separator = var.pet_separator
-}
-
-resource "random_pet" "example_three" {
-  length    = var.pet_length
-  prefix    = var.pet_prefix
-  separator = var.pet_separator
-}
-
-resource "random_pet" "example_four" {
-  length    = var.pet_length
-  prefix    = var.pet_prefix
-  separator = var.pet_separator
-}
-
-resource "random_pet" "example_five" {
-  length    = var.pet_length
-  prefix    = var.pet_prefix
-  separator = var.pet_separator
-}
-
-resource "random_pet" "example_six" {
-  length    = var.pet_length
-  prefix    = var.pet_prefix
-  separator = var.pet_separator
-}
-
-resource "random_pet" "example_seven" {
-  length    = var.pet_length
-  prefix    = var.pet_prefix
-  separator = var.pet_separator
+  pet_length    = 5
+  pet_prefix    = "module"
+  pet_separator =  "_"
 }
