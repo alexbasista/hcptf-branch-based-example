@@ -9,9 +9,9 @@ terraform {
 
 module "example-module" {
   source  = "app.terraform.io/abasista-tfc/example-module/random"
-  version = "1.1.0"
+  version = "1.2.0"
 
-  pet_length    = 5
-  pet_prefix    = "module"
-  pet_separator =  "_"
+  pet_length    = var.pet_length
+  pet_prefix    = var.pet_prefix
+  pet_separator = var.pet_separator
 }
