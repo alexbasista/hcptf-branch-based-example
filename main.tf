@@ -8,7 +8,7 @@ terraform {
 }
 
 module "example-module" {
-  source  = "app.terraform.io/banana/example-module/random"
+  source  = "app.terraform.io/abasista-tfc/example-module/random"
   version = "1.2.0"
 
   pet_length    = var.pet_length
